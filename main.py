@@ -77,5 +77,6 @@ def read_total_visitors():
     for datum in data:
         tot = datum.mobile + datum.desktop
         sum = sum + tot
-
-    return {"total_visitors": sum}
+    
+    total = int(np.round(sum))
+    return {"total_visitors": total}
