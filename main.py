@@ -40,7 +40,6 @@ def read_average_monthly_visitors():
             monthly_avg = 0.
             days = 0
             month = date.month  
-            continue 
 
         monthly_avg = monthly_avg + datum.mobile + datum.desktop 
         days = days + 1
