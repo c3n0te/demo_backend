@@ -6,11 +6,11 @@ status = ["Paid", "Unpaid"]
 method = ["Credit Card", "Paypal"]
 df = pd.DataFrame({"Invoice":[], "Status":[], "Method":[], "Amount":[]})
 
-for i in range(25):
-    inv = f"INV{i}"
+for i in range(10):
+    inv = f"INV{i+1}"
     stat = rng.choice(status)
     meth = rng.choice(method)
-    amount = rng.uniform(low=0., high=1000.)
+    amount = np.round(rng.uniform(low=0., high=1000.), decimals=2)
     #d = {"Invoice":inv, "Status":stat, "Method":meth, "Amount":amount}
     new_row = [inv, stat, meth, amount]
     df.loc[len(df)] = new_row
